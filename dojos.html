@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dojo Page</title>
+</head>
+<body>
+    <h1>Dojo Page</h1>
+    <a href="/">Home</a>
+    <a href="/ninjas/ninjas.html">Ninjas</a>
+    <p><em>Dojos</em></p>
+    <p>This HTML file is just here to test the Dojo Route.</p>
+    
+    <form action='/' name="request" method='post'>
+        <label for="name"><span>Your Name:</span>
+        <input type='text' name='name' id='name' value="{{session['name']}}"></label>
+        
+        <label for="location"><span>Dojo Location:</span>
+        <select name="location" id="location">
+            <option {{session['Seattle']}}>Seattle</option>
+            <option {{session['Silicon Valley']}}>Silicon Valley</option>
+            <option {{session['Los Angeles']}}>Los Angeles</option>
+            <option {{session['Dallas']}}>Dallas</option>
+            <option {{session['Tulsa']}}>Tulsa</option>
+            <option {{session['Chicago']}}>Chicago</option>
+            <option {{session['Washington DC']}}>Washington DC</option>
+        </select></label>
+        
+
+        <label for="language"><span>Favorite Language:</span>
+        <select name="language" id="language">
+            <option {{session['JQuery']}}>JQuery</option>
+            <option {{session['Java']}}>Java</option>
+            <option {{session['Javascript']}}>Javascript</option>
+            <option {{session['C Sharp']}}>C Sharp</option>
+            <option {{session['Python']}}>Python</option>
+            <option {{session['iOS Swift']}}>iOS Swift</option>
+        </select></label>
+        
+        <label for="comment"><span>Comment (Optional):</span>
+        <textarea name="comment" rows="4" cols="50">{{session['comment']}}</textarea></label>
+        
+        <span>
+            <input type='submit' value='Submit'>
+        </span>
+    </form>
+
+</body>
+</html>
